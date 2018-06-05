@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project" default="generate" basedir="${project.basedir}">
+	<property name="configuration.file.dir" value="${basedir}${file.separator}src${file.separator}main${file.separator}etc${file.separator}" />
+	<target name="cleanup">
+		<echo>NOTE: Please not change codes in model and mapper package, it is auto generated.</echo>
+		<echo>delete old model and mapper java files...</echo>
+		<delete>
+			<fileset dir="${basedir}/src/main/resources/mybatis" casesensitive="yes">
+			  	<include name="*Mapper.xml"/>
+			  	<exclude name="Optimized*Mapper.xml"/>
+			</fileset>
+			<fileset dir="${basedir}/src/main/java/com/openthinks/plc/core/model" casesensitive="yes">
+			  	<include name=".java"/>
+			  	<exclude name="Optimized*.java"/>
+			</fileset>
+			<fileset dir="${basedir}/src/main/java/com/openthinks/plc/core/mapper" casesensitive="yes">
+				<include name=".java"/>
+				<exclude name="Optimized*.java"/>
+			</fileset>
+		</delete>
+	</target>
+	<target name="generate" depends="cleanup">
+		<echo>basedir: ${basedir}</echo>
+		<echo>mybatis generator configuration file: ${configuration.file.dir}</echo>
+		<echo>This target depends on maven class path, it can not run independently</echo>
+		<taskdef name="mbgenerator" classname="org.mybatis.generator.ant.GeneratorAntTask" classpath="${maven.plugin.classpath}" />
+       	<mbgenerator overwrite="true" configfile="${basedir}/src/main/etc/generatorConfig.xml" verbose="true">
+         <propertyset>
+           <propertyref name="configuration.file.dir"/>
+         </propertyset>
+       	</mbgenerator>
+	</target>
+</project>

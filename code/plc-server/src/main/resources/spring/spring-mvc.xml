@@ -12,7 +12,7 @@
 	<context:property-placeholder location="classpath:config/platform.properties" />
 
 	<!-- 扫描controller（controller层注入） -->
-	<context:component-scan base-package="${spring.scan}" />
+	<context:component-scan base-package="${platform.spring.scan}" />
 
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
@@ -33,8 +33,8 @@
 	</bean>
 	<!-- end of marshaler -->
 
-	<!-- <bean id="customObjectMapper" class="com.iboitech.core.CustomObjectMapper"> 
-		</bean> -->
+	<bean id="customObjectMapper" class="com.openthinks.plc.CustomObjectMapper">
+	</bean>
 	<!-- 会自动注册DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter 
 		两个bean,是spring MVC为@Controllers分发请求所必须的 -->
 	<!-- 指定自己定义的validator -->

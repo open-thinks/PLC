@@ -20,7 +20,7 @@
     http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util.xsd">
            
-	<context:component-scan base-package="${mybatis.core}" />
+	<context:component-scan base-package="com.openthinks.plc.core" />
 	
 	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -44,7 +44,7 @@
           p:mapperLocations="classpath:mybatis/*Mapper.xml"/>
 
     <!-- spring与mybatis整合配置，扫描所有dao -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" p:basePackage="${mybatis.core}.mapper" p:sqlSessionFactoryBeanName="sqlSessionFactory"/>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" p:basePackage="com.openthinks.plc.core.mapper" p:sqlSessionFactoryBeanName="sqlSessionFactory"/>
 
     <!-- 对dataSource 数据源进行事务管理 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" p:dataSource-ref="dataSource"/>
@@ -79,7 +79,7 @@
 
     <!-- 事务 aop 配置 -->
     <aop:config>
-        <aop:pointcut id="serviceMethods" expression="execution(* ${mybatis.core}.service..*(..))"/>
+        <aop:pointcut id="serviceMethods" expression="execution(* com.openthinks.plc.core.service..*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods"/>
     </aop:config>
 

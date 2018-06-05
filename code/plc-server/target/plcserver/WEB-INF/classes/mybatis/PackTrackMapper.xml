@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.openthinks.plc.core.mapper.PackTrackMapper" >
+  <resultMap id="BaseResultMap" type="com.openthinks.plc.core.model.PackTrack" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="ship_id" property="shipId" jdbcType="BIGINT" />
+    <result column="pack_id" property="packId" jdbcType="BIGINT" />
+    <result column="track_date" property="trackDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" index="idx" >
+        <if test="criteria.valid" >
+          <if test="idx > 0" >
+            ${criteria.criteriaLogical}
+          </if>
+          <trim prefix="(" suffix=")" prefixOverrides="and |or" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  ${criterion.criterionLogical} ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  ${criterion.criterionLogical} ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  ${criterion.criterionLogical} ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  ${criterion.criterionLogical} ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" index="idx" >
+        <if test="criteria.valid" >
+          <if test="idx > 0" >
+            ${criteria.criteriaLogical}
+          </if>
+          <trim prefix="(" suffix=")" prefixOverrides="and |or" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  ${criterion.criterionLogical} ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  ${criterion.criterionLogical} ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  ${criterion.criterionLogical} ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  ${criterion.criterionLogical} ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, ship_id, pack_id, track_date
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.openthinks.plc.core.model.PackTrackExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from pack_track
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from pack_track
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from pack_track
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.openthinks.plc.core.model.PackTrackExample" >
+    delete from pack_track
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.openthinks.plc.core.model.PackTrack" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="BEFORE" >
+      SELECT UUID_SHORT()
+    </selectKey>
+    insert into pack_track (id, ship_id, pack_id, 
+      track_date)
+    values (#{id,jdbcType=BIGINT}, #{shipId,jdbcType=BIGINT}, #{packId,jdbcType=BIGINT}, 
+      #{trackDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.openthinks.plc.core.model.PackTrack" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="BEFORE" >
+      SELECT UUID_SHORT()
+    </selectKey>
+    insert into pack_track
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      id,
+      <if test="shipId != null" >
+        ship_id,
+      </if>
+      <if test="packId != null" >
+        pack_id,
+      </if>
+      <if test="trackDate != null" >
+        track_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      #{id,jdbcType=BIGINT},
+      <if test="shipId != null" >
+        #{shipId,jdbcType=BIGINT},
+      </if>
+      <if test="packId != null" >
+        #{packId,jdbcType=BIGINT},
+      </if>
+      <if test="trackDate != null" >
+        #{trackDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.openthinks.plc.core.model.PackTrackExample" resultType="java.lang.Integer" >
+    select count(*) from pack_track
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update pack_track
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.shipId != null" >
+        ship_id = #{record.shipId,jdbcType=BIGINT},
+      </if>
+      <if test="record.packId != null" >
+        pack_id = #{record.packId,jdbcType=BIGINT},
+      </if>
+      <if test="record.trackDate != null" >
+        track_date = #{record.trackDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update pack_track
+    set id = #{record.id,jdbcType=BIGINT},
+      ship_id = #{record.shipId,jdbcType=BIGINT},
+      pack_id = #{record.packId,jdbcType=BIGINT},
+      track_date = #{record.trackDate,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.openthinks.plc.core.model.PackTrack" >
+    update pack_track
+    <set >
+      <if test="shipId != null" >
+        ship_id = #{shipId,jdbcType=BIGINT},
+      </if>
+      <if test="packId != null" >
+        pack_id = #{packId,jdbcType=BIGINT},
+      </if>
+      <if test="trackDate != null" >
+        track_date = #{trackDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.openthinks.plc.core.model.PackTrack" >
+    update pack_track
+    set ship_id = #{shipId,jdbcType=BIGINT},
+      pack_id = #{packId,jdbcType=BIGINT},
+      track_date = #{trackDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <!-- generated by SelectOneByExamplePlugin Tue Jun 05 16:02:06 CST 2018 -->
+  <select id="selectOneByExample" parameterType="com.openthinks.plc.core.model.PackTrackExample" resultMap="BaseResultMap" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from pack_track
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select resultMap="BaseResultMap" parameterType="com.openthinks.plc.core.model.PackTrackExample" id="selectByExampleWithRowbounds" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from pack_track
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+</mapper>

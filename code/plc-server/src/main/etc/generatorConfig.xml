@@ -48,7 +48,7 @@
 			password="${generatorPassword}">
 		</jdbcConnection>
 
-		<javaModelGenerator targetPackage="${mybatis.core}.model"
+		<javaModelGenerator targetPackage="com.openthinks.plc.core.model"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
@@ -60,9 +60,68 @@
 		</sqlMapGenerator>
 
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="${mybatis.core}.mapper" targetProject="src/main/java">
+			targetPackage="com.openthinks.plc.core.mapper" targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
+
+
+		<table tableName="dictionary">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+		</table>
+
+		<table tableName="locations">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
+				identity="false" />
+		</table>
+
+		<table tableName="pack_track">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
+				identity="false" />
+		</table>
+
+		<table tableName="packs">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
+				identity="false" />
+		</table>
+
+		<table tableName="shippings">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
+				identity="false" />
+		</table>
+
+		<table tableName="vehicle_track">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
+				identity="false" />
+		</table>
+
+		<table tableName="vehicles">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
+				identity="false" />
+		</table>
+		<!-- View -->
+		<table tableName="locations_vw" enableInsert="false"
+			enableDeleteByExample="false" enableUpdateByExample="false"
+			enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+		</table>
+
+		<table tableName="packs_vw" enableInsert="false"
+			enableDeleteByExample="false" enableUpdateByExample="false"
+			enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+		</table>
+
+		<table tableName="shippings_vw" enableInsert="false"
+			enableDeleteByExample="false" enableUpdateByExample="false"
+			enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+		</table>
 
 	</context>
 </generatorConfiguration>
