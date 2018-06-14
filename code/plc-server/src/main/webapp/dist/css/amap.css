@@ -1,0 +1,14 @@
+#amap-container{
+	width: 100%;
+	min-height: 600px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.plc-amap-panel-expand{
+	position: relative;
+	margin: 0px;
+	margin-top: 10px;
+	width: 100%;
+	height: 100%;
+}

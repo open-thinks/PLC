@@ -2,8 +2,8 @@
 <project name="maven-antrun-" default="main"  >
 <target name="main">
   <property name="maven.plugin.classpath" refid="maven.plugin.classpath"/>
-  <property name="project.basedir" value="R:\DEV\Code\my\PLC\code\plc-server"/>
-  <property name="project.build.directory" value="R:\DEV\Code\my\PLC\code\plc-server\target"/>
-  <ant antfile="R:\DEV\Code\my\PLC\code\plc-server/build.xml" target="generate"/>
+  <property name="project.basedir" value="d:\DEV\Code\my\PLC\code\plc-server"/>
+  <property name="project.build.directory" value="d:\DEV\Code\my\PLC\code\plc-server\target"/>
+  <ant antfile="d:\DEV\Code\my\PLC\code\plc-server/build.xml" target="generate"/>
 </target>
 </project>
