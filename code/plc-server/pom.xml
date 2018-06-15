@@ -29,7 +29,7 @@
 
 		<tomcat.server.port>8088</tomcat.server.port>
 		<skipTests>true</skipTests>
-		<generate.skip>false</generate.skip>
+		<generate.skip>true</generate.skip>
 	</properties>
 
 	<dependencies>
@@ -62,7 +62,12 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.30</version>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<version>8.0.12</version>
 		</dependency>
 
 		<dependency>
@@ -270,6 +275,18 @@
 	</profiles>
 	<build>
 		<finalName>plcserver</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<path>/${project.build.finalName}</path>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
@@ -291,7 +308,7 @@
 					<!-- <warSourceExcludes>**/static/thirdparty/**</warSourceExcludes> -->
 					<webResources>
 						<resource>
-							<directory>${project.build.directory}/yueji</directory>
+							<directory>${project.build.directory}/${project.build.finalName}</directory>
 						</resource>
 					</webResources>
 				</configuration>
@@ -332,7 +349,7 @@
 							<properties>
 								<property>
 									<name>javaPackagePrefix</name>
-									<value>${mybatis.core}</value>
+									<value>${platform.mybatis.core}</value>
 								</property>
 								<property>
 									<name>generatorJDBCDriver</name>
