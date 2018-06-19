@@ -55,6 +55,14 @@ public class ShippingsVw {
 
     private String shipStatusDesc;
 
+    private String vehicleNo;
+
+    private String vehicleCompany;
+
+    private String vehicleDriver;
+
+    private Byte vehicleType;
+
     public Long getId() {
         return id;
     }
@@ -263,6 +271,38 @@ public class ShippingsVw {
         this.shipStatusDesc = shipStatusDesc == null ? null : shipStatusDesc.trim();
     }
 
+    public String getVehicleNo() {
+        return vehicleNo;
+    }
+
+    public void setVehicleNo(String vehicleNo) {
+        this.vehicleNo = vehicleNo == null ? null : vehicleNo.trim();
+    }
+
+    public String getVehicleCompany() {
+        return vehicleCompany;
+    }
+
+    public void setVehicleCompany(String vehicleCompany) {
+        this.vehicleCompany = vehicleCompany == null ? null : vehicleCompany.trim();
+    }
+
+    public String getVehicleDriver() {
+        return vehicleDriver;
+    }
+
+    public void setVehicleDriver(String vehicleDriver) {
+        this.vehicleDriver = vehicleDriver == null ? null : vehicleDriver.trim();
+    }
+
+    public Byte getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(Byte vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -300,7 +340,11 @@ public class ShippingsVw {
             && (this.getToCity() == null ? other.getToCity() == null : this.getToCity().equals(other.getToCity()))
             && (this.getToAddress() == null ? other.getToAddress() == null : this.getToAddress().equals(other.getToAddress()))
             && (this.getShipStatusName() == null ? other.getShipStatusName() == null : this.getShipStatusName().equals(other.getShipStatusName()))
-            && (this.getShipStatusDesc() == null ? other.getShipStatusDesc() == null : this.getShipStatusDesc().equals(other.getShipStatusDesc()));
+            && (this.getShipStatusDesc() == null ? other.getShipStatusDesc() == null : this.getShipStatusDesc().equals(other.getShipStatusDesc()))
+            && (this.getVehicleNo() == null ? other.getVehicleNo() == null : this.getVehicleNo().equals(other.getVehicleNo()))
+            && (this.getVehicleCompany() == null ? other.getVehicleCompany() == null : this.getVehicleCompany().equals(other.getVehicleCompany()))
+            && (this.getVehicleDriver() == null ? other.getVehicleDriver() == null : this.getVehicleDriver().equals(other.getVehicleDriver()))
+            && (this.getVehicleType() == null ? other.getVehicleType() == null : this.getVehicleType().equals(other.getVehicleType()));
     }
 
     @Override
@@ -333,6 +377,10 @@ public class ShippingsVw {
         result = prime * result + ((getToAddress() == null) ? 0 : getToAddress().hashCode());
         result = prime * result + ((getShipStatusName() == null) ? 0 : getShipStatusName().hashCode());
         result = prime * result + ((getShipStatusDesc() == null) ? 0 : getShipStatusDesc().hashCode());
+        result = prime * result + ((getVehicleNo() == null) ? 0 : getVehicleNo().hashCode());
+        result = prime * result + ((getVehicleCompany() == null) ? 0 : getVehicleCompany().hashCode());
+        result = prime * result + ((getVehicleDriver() == null) ? 0 : getVehicleDriver().hashCode());
+        result = prime * result + ((getVehicleType() == null) ? 0 : getVehicleType().hashCode());
         return result;
     }
 
@@ -470,6 +518,26 @@ public class ShippingsVw {
 
         public Builder shipStatusDesc(String shipStatusDesc) {
             obj.shipStatusDesc = shipStatusDesc;
+            return this;
+        }
+
+        public Builder vehicleNo(String vehicleNo) {
+            obj.vehicleNo = vehicleNo;
+            return this;
+        }
+
+        public Builder vehicleCompany(String vehicleCompany) {
+            obj.vehicleCompany = vehicleCompany;
+            return this;
+        }
+
+        public Builder vehicleDriver(String vehicleDriver) {
+            obj.vehicleDriver = vehicleDriver;
+            return this;
+        }
+
+        public Builder vehicleType(Byte vehicleType) {
+            obj.vehicleType = vehicleType;
             return this;
         }
 

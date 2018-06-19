@@ -1847,6 +1847,276 @@ public class ShippingsVwExample {
             return (Criteria) this;
         }
 
+        public Criteria andVehicleNoIsNull() {
+            addCriterion("vehicle_no is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoIsNotNull() {
+            addCriterion("vehicle_no is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoEqualTo(String value) {
+            addCriterion("vehicle_no =", value, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoNotEqualTo(String value) {
+            addCriterion("vehicle_no <>", value, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoGreaterThan(String value) {
+            addCriterion("vehicle_no >", value, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoGreaterThanOrEqualTo(String value) {
+            addCriterion("vehicle_no >=", value, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoLessThan(String value) {
+            addCriterion("vehicle_no <", value, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoLessThanOrEqualTo(String value) {
+            addCriterion("vehicle_no <=", value, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoLike(String value) {
+            addCriterion("vehicle_no like", value, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoNotLike(String value) {
+            addCriterion("vehicle_no not like", value, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoIn(List<String> values) {
+            addCriterion("vehicle_no in", values, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoNotIn(List<String> values) {
+            addCriterion("vehicle_no not in", values, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoBetween(String value1, String value2) {
+            addCriterion("vehicle_no between", value1, value2, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleNoNotBetween(String value1, String value2) {
+            addCriterion("vehicle_no not between", value1, value2, "vehicleNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyIsNull() {
+            addCriterion("vehicle_company is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyIsNotNull() {
+            addCriterion("vehicle_company is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyEqualTo(String value) {
+            addCriterion("vehicle_company =", value, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyNotEqualTo(String value) {
+            addCriterion("vehicle_company <>", value, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyGreaterThan(String value) {
+            addCriterion("vehicle_company >", value, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyGreaterThanOrEqualTo(String value) {
+            addCriterion("vehicle_company >=", value, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyLessThan(String value) {
+            addCriterion("vehicle_company <", value, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyLessThanOrEqualTo(String value) {
+            addCriterion("vehicle_company <=", value, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyLike(String value) {
+            addCriterion("vehicle_company like", value, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyNotLike(String value) {
+            addCriterion("vehicle_company not like", value, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyIn(List<String> values) {
+            addCriterion("vehicle_company in", values, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyNotIn(List<String> values) {
+            addCriterion("vehicle_company not in", values, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyBetween(String value1, String value2) {
+            addCriterion("vehicle_company between", value1, value2, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleCompanyNotBetween(String value1, String value2) {
+            addCriterion("vehicle_company not between", value1, value2, "vehicleCompany");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverIsNull() {
+            addCriterion("vehicle_driver is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverIsNotNull() {
+            addCriterion("vehicle_driver is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverEqualTo(String value) {
+            addCriterion("vehicle_driver =", value, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverNotEqualTo(String value) {
+            addCriterion("vehicle_driver <>", value, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverGreaterThan(String value) {
+            addCriterion("vehicle_driver >", value, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverGreaterThanOrEqualTo(String value) {
+            addCriterion("vehicle_driver >=", value, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverLessThan(String value) {
+            addCriterion("vehicle_driver <", value, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverLessThanOrEqualTo(String value) {
+            addCriterion("vehicle_driver <=", value, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverLike(String value) {
+            addCriterion("vehicle_driver like", value, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverNotLike(String value) {
+            addCriterion("vehicle_driver not like", value, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverIn(List<String> values) {
+            addCriterion("vehicle_driver in", values, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverNotIn(List<String> values) {
+            addCriterion("vehicle_driver not in", values, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverBetween(String value1, String value2) {
+            addCriterion("vehicle_driver between", value1, value2, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleDriverNotBetween(String value1, String value2) {
+            addCriterion("vehicle_driver not between", value1, value2, "vehicleDriver");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeIsNull() {
+            addCriterion("vehicle_type is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeIsNotNull() {
+            addCriterion("vehicle_type is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeEqualTo(Byte value) {
+            addCriterion("vehicle_type =", value, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeNotEqualTo(Byte value) {
+            addCriterion("vehicle_type <>", value, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeGreaterThan(Byte value) {
+            addCriterion("vehicle_type >", value, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeGreaterThanOrEqualTo(Byte value) {
+            addCriterion("vehicle_type >=", value, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeLessThan(Byte value) {
+            addCriterion("vehicle_type <", value, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeLessThanOrEqualTo(Byte value) {
+            addCriterion("vehicle_type <=", value, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeIn(List<Byte> values) {
+            addCriterion("vehicle_type in", values, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeNotIn(List<Byte> values) {
+            addCriterion("vehicle_type not in", values, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeBetween(Byte value1, Byte value2) {
+            addCriterion("vehicle_type between", value1, value2, "vehicleType");
+            return (Criteria) this;
+        }
+
+        public Criteria andVehicleTypeNotBetween(Byte value1, Byte value2) {
+            addCriterion("vehicle_type not between", value1, value2, "vehicleType");
+            return (Criteria) this;
+        }
+
         public Criteria andGenericSubquery(String subQueryClause) {
             addCriterion(subQueryClause);
             return (Criteria) this;
@@ -3896,6 +4166,330 @@ public class ShippingsVwExample {
 
         public Criteria orShipStatusDescNotBetween(String value1, String value2) {
             addCriterion("ship_status_desc not between", value1, value2, "shipStatusDesc");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoIsNull() {
+            addCriterion("vehicle_no is null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoIsNotNull() {
+            addCriterion("vehicle_no is not null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoEqualTo(String value) {
+            addCriterion("vehicle_no =", value, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoNotEqualTo(String value) {
+            addCriterion("vehicle_no <>", value, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoGreaterThan(String value) {
+            addCriterion("vehicle_no >", value, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoGreaterThanOrEqualTo(String value) {
+            addCriterion("vehicle_no >=", value, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoLessThan(String value) {
+            addCriterion("vehicle_no <", value, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoLessThanOrEqualTo(String value) {
+            addCriterion("vehicle_no <=", value, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoLike(String value) {
+            addCriterion("vehicle_no like", value, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoNotLike(String value) {
+            addCriterion("vehicle_no not like", value, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoIn(List<String> values) {
+            addCriterion("vehicle_no in", values, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoNotIn(List<String> values) {
+            addCriterion("vehicle_no not in", values, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoBetween(String value1, String value2) {
+            addCriterion("vehicle_no between", value1, value2, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleNoNotBetween(String value1, String value2) {
+            addCriterion("vehicle_no not between", value1, value2, "vehicleNo");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyIsNull() {
+            addCriterion("vehicle_company is null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyIsNotNull() {
+            addCriterion("vehicle_company is not null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyEqualTo(String value) {
+            addCriterion("vehicle_company =", value, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyNotEqualTo(String value) {
+            addCriterion("vehicle_company <>", value, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyGreaterThan(String value) {
+            addCriterion("vehicle_company >", value, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyGreaterThanOrEqualTo(String value) {
+            addCriterion("vehicle_company >=", value, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyLessThan(String value) {
+            addCriterion("vehicle_company <", value, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyLessThanOrEqualTo(String value) {
+            addCriterion("vehicle_company <=", value, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyLike(String value) {
+            addCriterion("vehicle_company like", value, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyNotLike(String value) {
+            addCriterion("vehicle_company not like", value, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyIn(List<String> values) {
+            addCriterion("vehicle_company in", values, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyNotIn(List<String> values) {
+            addCriterion("vehicle_company not in", values, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyBetween(String value1, String value2) {
+            addCriterion("vehicle_company between", value1, value2, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleCompanyNotBetween(String value1, String value2) {
+            addCriterion("vehicle_company not between", value1, value2, "vehicleCompany");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverIsNull() {
+            addCriterion("vehicle_driver is null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverIsNotNull() {
+            addCriterion("vehicle_driver is not null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverEqualTo(String value) {
+            addCriterion("vehicle_driver =", value, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverNotEqualTo(String value) {
+            addCriterion("vehicle_driver <>", value, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverGreaterThan(String value) {
+            addCriterion("vehicle_driver >", value, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverGreaterThanOrEqualTo(String value) {
+            addCriterion("vehicle_driver >=", value, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverLessThan(String value) {
+            addCriterion("vehicle_driver <", value, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverLessThanOrEqualTo(String value) {
+            addCriterion("vehicle_driver <=", value, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverLike(String value) {
+            addCriterion("vehicle_driver like", value, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverNotLike(String value) {
+            addCriterion("vehicle_driver not like", value, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverIn(List<String> values) {
+            addCriterion("vehicle_driver in", values, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverNotIn(List<String> values) {
+            addCriterion("vehicle_driver not in", values, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverBetween(String value1, String value2) {
+            addCriterion("vehicle_driver between", value1, value2, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleDriverNotBetween(String value1, String value2) {
+            addCriterion("vehicle_driver not between", value1, value2, "vehicleDriver");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeIsNull() {
+            addCriterion("vehicle_type is null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeIsNotNull() {
+            addCriterion("vehicle_type is not null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeEqualTo(Byte value) {
+            addCriterion("vehicle_type =", value, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeNotEqualTo(Byte value) {
+            addCriterion("vehicle_type <>", value, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeGreaterThan(Byte value) {
+            addCriterion("vehicle_type >", value, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeGreaterThanOrEqualTo(Byte value) {
+            addCriterion("vehicle_type >=", value, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeLessThan(Byte value) {
+            addCriterion("vehicle_type <", value, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeLessThanOrEqualTo(Byte value) {
+            addCriterion("vehicle_type <=", value, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeIn(List<Byte> values) {
+            addCriterion("vehicle_type in", values, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeNotIn(List<Byte> values) {
+            addCriterion("vehicle_type not in", values, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeBetween(Byte value1, Byte value2) {
+            addCriterion("vehicle_type between", value1, value2, "vehicleType");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orVehicleTypeNotBetween(Byte value1, Byte value2) {
+            addCriterion("vehicle_type not between", value1, value2, "vehicleType");
             criteria.get(criteria.size()-1).setCriterionLogical("or");
             return (Criteria) this;
         }

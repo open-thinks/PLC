@@ -14,14 +14,14 @@ import com.openthinks.plc.core.common.JSONConverters;
 import com.openthinks.plc.core.common.JSONObject;
 import com.openthinks.plc.core.model.LocationsVw;
 import com.openthinks.plc.core.service.LocationService;
-import com.openthinks.plc.saas.Constant;
+import com.openthinks.plc.saas.APIConstant;
 
 /**
  * @author dailey.yet@outlook.com
  *
  */
 @Controller
-@RequestMapping(Constant.LOCATION)
+@RequestMapping(APIConstant.LOCATION)
 public class LocationAPI {
 
 	@Autowired
