@@ -5,8 +5,8 @@ window.app = window.app || {
 	envConf: {
 		dev: {
 			base_url: {
-				server: '//localhost:8088/plcserver/',
-				staticUrl:'//localhost:8088/plcserver/static/'
+				server: '//localhost:8088/plc/',
+				staticUrl:'//localhost:8088/plc/static/'
 			},
 			mqtt:{
 				host:"localhost",
@@ -18,11 +18,11 @@ window.app = window.app || {
 		},
 		prod: {
 			base_url:{
-				server: '//47.100.48.122/plcserver/',
-				staticUrl:'//localhost:8088/plcserver/static/'
+				server: '//139.219.0.117:8080/plc/',
+				staticUrl:'//139.219.0.117:8080/plc/static/'
 			},
 			mqtt:{
-				host:"47.100.48.122",
+				host:"139.219.0.117",
 				port:"1833",
 				topic_template:"TBOX/NAD/${imei}/LOG",
 				client_template:"rdb-ws-${sid}"
