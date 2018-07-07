@@ -18,11 +18,11 @@ window.app = window.app || {
 		},
 		prod: {
 			base_url:{
-				server: '//139.219.0.117:8080/plc/',
-				staticUrl:'//139.219.0.117:8080/plc/static/'
+				server: '//tokyo.tochat.cc:8080/plc/',
+				staticUrl:'//tokyo.tochat.cc:8080/plc/static/'
 			},
 			mqtt:{
-				host:"139.219.0.117",
+				host:"tokyo.tochat.cc",
 				port:"1833",
 				topic_template:"TBOX/NAD/${imei}/LOG",
 				client_template:"rdb-ws-${sid}"

@@ -255,7 +255,7 @@
 			</activation>
 			<properties>
 				<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-				<jdbc.url>jdbc:mysql://localhost:3306/plc?characterEncoding=UTF-8</jdbc.url>
+				<jdbc.url>jdbc:mysql://tochat.cc:3306/plc?characterEncoding=UTF-8</jdbc.url>
 				<jdbc.username>root</jdbc.username>
 				<jdbc.password>123456</jdbc.password>
 				<jdbc.minPoolSize>1</jdbc.minPoolSize>
@@ -284,7 +284,7 @@
 		</profile>
 	</profiles>
 	<build>
-		<finalName>plcserver</finalName>
+		<finalName>plc</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>

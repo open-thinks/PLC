@@ -6,19 +6,19 @@ Packing Lifecycle API
 # PLC API II
 
 > *API_URI*: API根路径URL
-> 本地测试: http://localhost:8088/plcserver/
+> 本地测试: http://localhost:8088/plc/
 > 远程测试:暂定
 >
 
 
 ## 运单API
 
-###  /ships/list
+###  /api/ships/list
 列出所有的运单号，可以根据运单状态进行筛选列出
 
 #### 请求地址
 
-*API_URI*/ships/list[?status=0]
+*API_URI*/api/ships/list[?status=0]
 
 #### 请求类型
 
@@ -72,7 +72,7 @@ sample
 
 ## 包装API
 
-### /packings/outbound/{shipId}
+### /api/packings/outbound/{shipId}
 
 包装出库并关联到相应的运单
 
@@ -114,7 +114,7 @@ POST + JSON ( contentType: "application/json; charset=utf-8 )
 
 ## 车辆轨迹API
 
-### /vehicles/track
+### /api/vehicles/track
 
 更新车辆轨迹信息
 
