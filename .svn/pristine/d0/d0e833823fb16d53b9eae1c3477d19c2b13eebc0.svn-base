@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.xyz.step:step-1.0.4">
+    <CLASSES>
+      <root url="file://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/step-1.0.4.aar/8ea5313c238f047cdfb8cbe4a9c5f028/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/step-1.0.4.aar/8ea5313c238f047cdfb8cbe4a9c5f028/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/modules-2/files-2.1/com.xyz.step/step/1.0.4/f19b48cd50e7e248028fb6c58824e93dd8ac38fa/step-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

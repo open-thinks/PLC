@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Id>39aac1ce-dc47-4800-9dee-3cf6edab5b13</Id>
+  <Name>PLC</Name>
+  <Url>http://tochat.cc:8080/plc/api/</Url>
+  <QueryString />
+  <HttpProtocol>1.1</HttpProtocol>
+  <Timeout>30</Timeout>
+  <ProjectFileEncoding>utf-8</ProjectFileEncoding>
+  <Description>tochat.cc:8080/plc/</Description>
+  <RequestEncoding>utf-8</RequestEncoding>
+  <AutomaticDecompression>true</AutomaticDecompression>
+  <AllowStreamBuffering>true</AllowStreamBuffering>
+  <DynamicParameters />
+  <Headers />
+  <UseAuthentication>false</UseAuthentication>
+  <AuthenticationData>
+    <AuthenticationCredentials />
+    <ImpersonationLevel />
+    <SpecifiedCredentials />
+  </AuthenticationData>
+  <AllowRedirect>true</AllowRedirect>
+  <MaximumRedirections>50</MaximumRedirections>
+  <KeepAlive>true</KeepAlive>
+  <EncodeUrl>true</EncodeUrl>
+  <EncodeForm>true</EncodeForm>
+  <ProjectItems>
+    <ProjectItem>
+      <Id>4e211f9a-b5a2-45ec-8b34-76a32d5a800e</Id>
+      <Name>ships/list</Name>
+      <Url>ships/list</Url>
+      <RequestBody />
+      <Method>GET</Method>
+      <ContentType />
+      <SendChunked>false</SendChunked>
+      <ExecutionCount>1</ExecutionCount>
+      <UrlOption>relative</UrlOption>
+      <AppendGlobalQueryString>false</AppendGlobalQueryString>
+      <CreateDate>636669478802732015</CreateDate>
+      <ChangeDate>636669478802732015</ChangeDate>
+      <ValidationRule />
+      <IncludeProjectAuthentication>true</IncludeProjectAuthentication>
+      <PercentEncodeParameters d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <IncludeReceivedCookies>false</IncludeReceivedCookies>
+      <IncludeProjectHeaders>true</IncludeProjectHeaders>
+      <BodySource d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <AdditionalHeaders />
+      <ExecutionOrder>1</ExecutionOrder>
+      <IncludeWithCommandLine>true</IncludeWithCommandLine>
+      <IgnoreExecution>false</IgnoreExecution>
+      <IncludedCookies />
+      <UploadAsBase64>false</UploadAsBase64>
+      <Description />
+      <ValidationExecutionBehavior>0</ValidationExecutionBehavior>
+      <OperationId />
+      <RewriteCookieDomain>false</RewriteCookieDomain>
+      <BodyViewer>0</BodyViewer>
+    </ProjectItem>
+    <ProjectItem>
+      <Id>a59a0b72-a289-482f-8f66-88f2f7bc713f</Id>
+      <Name>packings/outbound/{shipId}</Name>
+      <Url>packings/outbound/1</Url>
+      <RequestBody>[
+{"id":"222225"}
+]</RequestBody>
+      <Method>POST</Method>
+      <ContentType>application/json</ContentType>
+      <SendChunked>false</SendChunked>
+      <ExecutionCount>1</ExecutionCount>
+      <UrlOption>relative</UrlOption>
+      <AppendGlobalQueryString>false</AppendGlobalQueryString>
+      <CreateDate>636669479667720016</CreateDate>
+      <ChangeDate>636669482971074037</ChangeDate>
+      <ValidationRule />
+      <IncludeProjectAuthentication>true</IncludeProjectAuthentication>
+      <PercentEncodeParameters d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <IncludeReceivedCookies>false</IncludeReceivedCookies>
+      <IncludeProjectHeaders>true</IncludeProjectHeaders>
+      <BodySource>0</BodySource>
+      <AdditionalHeaders />
+      <ExecutionOrder>2</ExecutionOrder>
+      <IncludeWithCommandLine>true</IncludeWithCommandLine>
+      <IgnoreExecution>false</IgnoreExecution>
+      <IncludedCookies />
+      <UploadAsBase64>false</UploadAsBase64>
+      <Description />
+      <ValidationExecutionBehavior>0</ValidationExecutionBehavior>
+      <OperationId />
+      <RewriteCookieDomain>false</RewriteCookieDomain>
+      <BodyViewer>2</BodyViewer>
+    </ProjectItem>
+  </ProjectItems>
+  <CreateDate>636669478245662015</CreateDate>
+  <ChangeDate>636669482971074037</ChangeDate>
+  <Version>39</Version>
+  <MonitorData>true</MonitorData>
+  <Validations />
+  <ExecutionDelay>0</ExecutionDelay>
+  <FirstExecutionDelay>0</FirstExecutionDelay>
+  <ValidateServerCertificate>false</ValidateServerCertificate>
+  <Chainings />
+  <ExecutionGroups />
+  <GlobalUrlList />
+  <GlobalQueryStringList />
+</Project>

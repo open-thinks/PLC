@@ -500,6 +500,276 @@ public class VehicleTrackExample {
             return (Criteria) this;
         }
 
+        public Criteria andYaliIsNull() {
+            addCriterion("yali is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliIsNotNull() {
+            addCriterion("yali is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliEqualTo(String value) {
+            addCriterion("yali =", value, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliNotEqualTo(String value) {
+            addCriterion("yali <>", value, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliGreaterThan(String value) {
+            addCriterion("yali >", value, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliGreaterThanOrEqualTo(String value) {
+            addCriterion("yali >=", value, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliLessThan(String value) {
+            addCriterion("yali <", value, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliLessThanOrEqualTo(String value) {
+            addCriterion("yali <=", value, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliLike(String value) {
+            addCriterion("yali like", value, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliNotLike(String value) {
+            addCriterion("yali not like", value, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliIn(List<String> values) {
+            addCriterion("yali in", values, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliNotIn(List<String> values) {
+            addCriterion("yali not in", values, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliBetween(String value1, String value2) {
+            addCriterion("yali between", value1, value2, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andYaliNotBetween(String value1, String value2) {
+            addCriterion("yali not between", value1, value2, "yali");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempIsNull() {
+            addCriterion("temp is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempIsNotNull() {
+            addCriterion("temp is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempEqualTo(String value) {
+            addCriterion("temp =", value, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempNotEqualTo(String value) {
+            addCriterion("temp <>", value, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempGreaterThan(String value) {
+            addCriterion("temp >", value, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempGreaterThanOrEqualTo(String value) {
+            addCriterion("temp >=", value, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempLessThan(String value) {
+            addCriterion("temp <", value, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempLessThanOrEqualTo(String value) {
+            addCriterion("temp <=", value, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempLike(String value) {
+            addCriterion("temp like", value, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempNotLike(String value) {
+            addCriterion("temp not like", value, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempIn(List<String> values) {
+            addCriterion("temp in", values, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempNotIn(List<String> values) {
+            addCriterion("temp not in", values, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempBetween(String value1, String value2) {
+            addCriterion("temp between", value1, value2, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andTempNotBetween(String value1, String value2) {
+            addCriterion("temp not between", value1, value2, "temp");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduIsNull() {
+            addCriterion("shidu is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduIsNotNull() {
+            addCriterion("shidu is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduEqualTo(String value) {
+            addCriterion("shidu =", value, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduNotEqualTo(String value) {
+            addCriterion("shidu <>", value, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduGreaterThan(String value) {
+            addCriterion("shidu >", value, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduGreaterThanOrEqualTo(String value) {
+            addCriterion("shidu >=", value, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduLessThan(String value) {
+            addCriterion("shidu <", value, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduLessThanOrEqualTo(String value) {
+            addCriterion("shidu <=", value, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduLike(String value) {
+            addCriterion("shidu like", value, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduNotLike(String value) {
+            addCriterion("shidu not like", value, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduIn(List<String> values) {
+            addCriterion("shidu in", values, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduNotIn(List<String> values) {
+            addCriterion("shidu not in", values, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduBetween(String value1, String value2) {
+            addCriterion("shidu between", value1, value2, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andShiduNotBetween(String value1, String value2) {
+            addCriterion("shidu not between", value1, value2, "shidu");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateIsNull() {
+            addCriterion("door_state is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateIsNotNull() {
+            addCriterion("door_state is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateEqualTo(Integer value) {
+            addCriterion("door_state =", value, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateNotEqualTo(Integer value) {
+            addCriterion("door_state <>", value, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateGreaterThan(Integer value) {
+            addCriterion("door_state >", value, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateGreaterThanOrEqualTo(Integer value) {
+            addCriterion("door_state >=", value, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateLessThan(Integer value) {
+            addCriterion("door_state <", value, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateLessThanOrEqualTo(Integer value) {
+            addCriterion("door_state <=", value, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateIn(List<Integer> values) {
+            addCriterion("door_state in", values, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateNotIn(List<Integer> values) {
+            addCriterion("door_state not in", values, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateBetween(Integer value1, Integer value2) {
+            addCriterion("door_state between", value1, value2, "doorState");
+            return (Criteria) this;
+        }
+
+        public Criteria andDoorStateNotBetween(Integer value1, Integer value2) {
+            addCriterion("door_state not between", value1, value2, "doorState");
+            return (Criteria) this;
+        }
+
         public Criteria andGenericSubquery(String subQueryClause) {
             addCriterion(subQueryClause);
             return (Criteria) this;
@@ -965,6 +1235,330 @@ public class VehicleTrackExample {
 
         public Criteria orTrackTimeNotBetween(Date value1, Date value2) {
             addCriterion("track_time not between", value1, value2, "trackTime");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliIsNull() {
+            addCriterion("yali is null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliIsNotNull() {
+            addCriterion("yali is not null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliEqualTo(String value) {
+            addCriterion("yali =", value, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliNotEqualTo(String value) {
+            addCriterion("yali <>", value, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliGreaterThan(String value) {
+            addCriterion("yali >", value, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliGreaterThanOrEqualTo(String value) {
+            addCriterion("yali >=", value, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliLessThan(String value) {
+            addCriterion("yali <", value, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliLessThanOrEqualTo(String value) {
+            addCriterion("yali <=", value, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliLike(String value) {
+            addCriterion("yali like", value, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliNotLike(String value) {
+            addCriterion("yali not like", value, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliIn(List<String> values) {
+            addCriterion("yali in", values, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliNotIn(List<String> values) {
+            addCriterion("yali not in", values, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliBetween(String value1, String value2) {
+            addCriterion("yali between", value1, value2, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orYaliNotBetween(String value1, String value2) {
+            addCriterion("yali not between", value1, value2, "yali");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempIsNull() {
+            addCriterion("temp is null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempIsNotNull() {
+            addCriterion("temp is not null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempEqualTo(String value) {
+            addCriterion("temp =", value, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempNotEqualTo(String value) {
+            addCriterion("temp <>", value, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempGreaterThan(String value) {
+            addCriterion("temp >", value, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempGreaterThanOrEqualTo(String value) {
+            addCriterion("temp >=", value, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempLessThan(String value) {
+            addCriterion("temp <", value, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempLessThanOrEqualTo(String value) {
+            addCriterion("temp <=", value, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempLike(String value) {
+            addCriterion("temp like", value, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempNotLike(String value) {
+            addCriterion("temp not like", value, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempIn(List<String> values) {
+            addCriterion("temp in", values, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempNotIn(List<String> values) {
+            addCriterion("temp not in", values, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempBetween(String value1, String value2) {
+            addCriterion("temp between", value1, value2, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orTempNotBetween(String value1, String value2) {
+            addCriterion("temp not between", value1, value2, "temp");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduIsNull() {
+            addCriterion("shidu is null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduIsNotNull() {
+            addCriterion("shidu is not null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduEqualTo(String value) {
+            addCriterion("shidu =", value, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduNotEqualTo(String value) {
+            addCriterion("shidu <>", value, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduGreaterThan(String value) {
+            addCriterion("shidu >", value, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduGreaterThanOrEqualTo(String value) {
+            addCriterion("shidu >=", value, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduLessThan(String value) {
+            addCriterion("shidu <", value, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduLessThanOrEqualTo(String value) {
+            addCriterion("shidu <=", value, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduLike(String value) {
+            addCriterion("shidu like", value, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduNotLike(String value) {
+            addCriterion("shidu not like", value, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduIn(List<String> values) {
+            addCriterion("shidu in", values, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduNotIn(List<String> values) {
+            addCriterion("shidu not in", values, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduBetween(String value1, String value2) {
+            addCriterion("shidu between", value1, value2, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orShiduNotBetween(String value1, String value2) {
+            addCriterion("shidu not between", value1, value2, "shidu");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateIsNull() {
+            addCriterion("door_state is null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateIsNotNull() {
+            addCriterion("door_state is not null");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateEqualTo(Integer value) {
+            addCriterion("door_state =", value, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateNotEqualTo(Integer value) {
+            addCriterion("door_state <>", value, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateGreaterThan(Integer value) {
+            addCriterion("door_state >", value, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateGreaterThanOrEqualTo(Integer value) {
+            addCriterion("door_state >=", value, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateLessThan(Integer value) {
+            addCriterion("door_state <", value, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateLessThanOrEqualTo(Integer value) {
+            addCriterion("door_state <=", value, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateIn(List<Integer> values) {
+            addCriterion("door_state in", values, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateNotIn(List<Integer> values) {
+            addCriterion("door_state not in", values, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateBetween(Integer value1, Integer value2) {
+            addCriterion("door_state between", value1, value2, "doorState");
+            criteria.get(criteria.size()-1).setCriterionLogical("or");
+            return (Criteria) this;
+        }
+
+        public Criteria orDoorStateNotBetween(Integer value1, Integer value2) {
+            addCriterion("door_state not between", value1, value2, "doorState");
             criteria.get(criteria.size()-1).setCriterionLogical("or");
             return (Criteria) this;
         }

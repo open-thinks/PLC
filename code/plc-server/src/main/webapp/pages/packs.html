@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>PLC - Package Lifecycle</title>
+
+		<!-- Bootstrap Core CSS -->
+		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- MetisMenu CSS -->
+		<link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+		<!-- Custom Fonts -->
+		<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<style>
+			.plc-pack-table-in .header {
+			}
+			
+			.plc-pack-table-out .header {
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">包装箱</h1>
+				</div>
+				<!-- /.col-lg-12 -->
+			</div>
+			<!-- /.row -->
+			<div class="row plc-pack">
+				<div class="col-lg-6">
+					<caption>已入库</caption>
+					<table class="table table-bordered plc-pack-table-in">
+						<tr class="header text-primary">
+							<th>编号</th>
+							<th>状态</th>
+						</tr>
+					</table>
+				</div>
+				<div class="col-lg-6">
+					<caption>已出库</caption>
+					<table class="table table-bordered plc-pack-table-out">
+						<tr class="header text-warning">
+							<th>编号</th>
+							<th>状态</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!-- /.row -->
+
+		</div>
+		<!-- /#wrapper -->
+
+		<!-- jQuery -->
+		<script src="../vendor/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Metis Menu Plugin JavaScript -->
+		<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+		<script type="text/javascript" src="../dist/js/app.cnf.js"></script>
+
+		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+		<script>
+			function getUrlParameter(name) {
+				name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+				var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+				var results = regex.exec(location.search);
+				return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			};
+			$(document).ready(function() {
+				var sId = getUrlParameter("id");
+				$.getJSON(getServerUrl("api/locations/" + sId + "/packs"), function(data) {
+					log(data.data);
+					if(data.result != 0) {
+						return;
+					}
+					var arryIn = data.data.in;
+					if(arryIn.length > 0) {
+						for(var i in arryIn) {
+							createInTable(arryIn[i]);
+						}
+					}
+					var arryOut = data.data.out;
+					if(arryOut.length > 0) {
+						for(var i in arryOut) {
+							createOutTable(arryOut[i]);
+						}
+					}
+				});
+
+			});
+
+			function createInTable(data) {
+				var $in = $(".plc-pack-table-in");
+				var str = "<tr><td>" + data.id + "</td><td>" + data.packStatusName + "</td></tr>";
+				$in.append(str);
+			}
+
+			function createOutTable(data) {
+				var $in = $(".plc-pack-table-out");
+				var str = "<tr><td>" + data.id + "</td><td>" + data.packStatusName + "</td></tr>";
+				$in.append(str);
+			}
+		</script>
+
+	</body>
+
+</html>

@@ -246,6 +246,14 @@
 			<artifactId>aspectjrt</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.eclipse.paho/mqtt-client -->
+		<dependency>
+			<groupId>org.eclipse.paho</groupId>
+			<artifactId>mqtt-client</artifactId>
+			<version>0.4.0</version>
+		</dependency>
+
 	</dependencies>
 	<profiles>
 		<profile>
@@ -253,6 +261,37 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+			<properties>
+				<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc:mysql://127.0.0.1:3306/plc?characterEncoding=UTF-8</jdbc.url>
+				<jdbc.username>root</jdbc.username>
+				<jdbc.password>123456</jdbc.password>
+				<jdbc.minPoolSize>1</jdbc.minPoolSize>
+				<jdbc.maxPoolSize>20</jdbc.maxPoolSize>
+				<jdbc.initialPoolSize>1</jdbc.initialPoolSize>
+				<jdbc.maxIdleTime>10</jdbc.maxIdleTime>
+				<jdbc.minIdleTime>10</jdbc.minIdleTime>
+				<jdbc.acquireIncrement>3</jdbc.acquireIncrement>
+				<jdbc.maxStatements>100</jdbc.maxStatements>
+				<jdbc.idleConnectionTestPeriod>180</jdbc.idleConnectionTestPeriod>
+				<jdbc.acquireRetryAttempts>30</jdbc.acquireRetryAttempts>
+				<jdbc.breakAfterAcquireFailure>false</jdbc.breakAfterAcquireFailure>
+				<jdbc.testConnectionOnCheckout>false</jdbc.testConnectionOnCheckout>
+				<jdbc.preferredTestQuery>select null</jdbc.preferredTestQuery>
+				<jdbc.checkoutTimeout>30000</jdbc.checkoutTimeout>
+				<platform.mybatis.core>com.openthinks.plc.core</platform.mybatis.core>
+				<platform.spring.scan>com.openthinks.plc</platform.spring.scan>
+				<platform.appHost>http://localhost:8088/</platform.appHost>
+				<platform.staticUri>http://localhost:8088/plc/static/</platform.staticUri>
+				<platform.sassUri>http://localhost:8088/plc/</platform.sassUri>
+				<platform.dateFormat>yyyy-MM-dd hh:mm:ss</platform.dateFormat>
+				<log4j.level>debug</log4j.level>
+				<log4j.app.folder>../logs</log4j.app.folder>
+				<page.size>15</page.size>
+			</properties>
+		</profile>
+		<profile>
+			<id>uat</id>
 			<properties>
 				<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
 				<jdbc.url>jdbc:mysql://tochat.cc:3306/plc?characterEncoding=UTF-8</jdbc.url>
@@ -273,9 +312,41 @@
 				<jdbc.checkoutTimeout>30000</jdbc.checkoutTimeout>
 				<platform.mybatis.core>com.openthinks.plc.core</platform.mybatis.core>
 				<platform.spring.scan>com.openthinks.plc</platform.spring.scan>
-				<platform.appHost>localhost:8088/</platform.appHost>
-				<platform.staticUri>localhost:8088/plc/static/</platform.staticUri>
-				<platform.sassUri>localhost:8088/plc/</platform.sassUri>
+				<platform.appHost>http://tochat.cc:8088/</platform.appHost>
+				<platform.staticUri>http://tochat.cc:8088/plc/static/</platform.staticUri>
+				<platform.sassUri>http://tochat.cc:8088/plc/</platform.sassUri>
+				<platform.dateFormat>yyyy-MM-dd hh:mm:ss</platform.dateFormat>
+				<log4j.level>debug</log4j.level>
+				<log4j.app.folder>../logs</log4j.app.folder>
+				<page.size>15</page.size>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>bosch</id>
+			<properties>
+				<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+				<jdbc.url>jdbc:mysql://bosch.tochat.cc:3306/plc?characterEncoding=UTF-8</jdbc.url>
+				<jdbc.username>root</jdbc.username>
+				<jdbc.password>123456</jdbc.password>
+				<jdbc.minPoolSize>1</jdbc.minPoolSize>
+				<jdbc.maxPoolSize>20</jdbc.maxPoolSize>
+				<jdbc.initialPoolSize>1</jdbc.initialPoolSize>
+				<jdbc.maxIdleTime>10</jdbc.maxIdleTime>
+				<jdbc.minIdleTime>10</jdbc.minIdleTime>
+				<jdbc.acquireIncrement>3</jdbc.acquireIncrement>
+				<jdbc.maxStatements>100</jdbc.maxStatements>
+				<jdbc.idleConnectionTestPeriod>180</jdbc.idleConnectionTestPeriod>
+				<jdbc.acquireRetryAttempts>30</jdbc.acquireRetryAttempts>
+				<jdbc.breakAfterAcquireFailure>false</jdbc.breakAfterAcquireFailure>
+				<jdbc.testConnectionOnCheckout>false</jdbc.testConnectionOnCheckout>
+				<jdbc.preferredTestQuery>select null</jdbc.preferredTestQuery>
+				<jdbc.checkoutTimeout>30000</jdbc.checkoutTimeout>
+				<platform.mybatis.core>com.openthinks.plc.core</platform.mybatis.core>
+				<platform.spring.scan>com.openthinks.plc</platform.spring.scan>
+				<platform.appHost>http://bosch.tochat.cc:8088/</platform.appHost>
+				<platform.staticUri>http://bosch.tochat.cc:8088/plc/static/</platform.staticUri>
+				<platform.sassUri>http://bosch.tochat.cc:8088/plc/</platform.sassUri>
 				<platform.dateFormat>yyyy-MM-dd hh:mm:ss</platform.dateFormat>
 				<log4j.level>debug</log4j.level>
 				<log4j.app.folder>../logs</log4j.app.folder>

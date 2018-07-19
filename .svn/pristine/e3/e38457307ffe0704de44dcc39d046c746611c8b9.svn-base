@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<title>基本地图展示</title>
+		<link rel="stylesheet" href="vendor/amap/css/main1119.css" />
+		<script src="vendor/amap/js/es5.min.js"></script>
+	</head>
+
+	<body>
+		<div id="container"></div>
+
+		<script type="text/javascript">
+			window.init = function() {
+				map = new AMap.Map('container', {
+					resizeEnable: true,
+					zoom: 11,
+					center: [116.397428, 39.90923],
+					//      layers: [//使用多个图层
+					//          new AMap.TileLayer.Satellite(),
+					//          new AMap.TileLayer.RoadNet()
+					//      ],
+					viewMode: '3D' //使用3D视图
+
+				});
+				map.setStatus({
+					scrollWheel: true
+				});
+				map.plugin(["AMap.ToolBar"], function() {
+					map.addControl(new AMap.ToolBar({
+						liteStyle: true
+					}))
+				});
+				//实时路况图层
+				var trafficLayer = new AMap.TileLayer.Traffic({
+					zIndex: 10
+				});
+				//map.add(trafficLayer);//添加图层到地图
+				var marker = new AMap.Marker({
+					position: [116.39, 39.9] //位置
+				})
+				map.add(marker); //添加到地图
+
+				var lineArr = [
+					[116.368904, 39.913423],
+					[116.382122, 39.901176],
+					[116.387271, 39.912501],
+					[116.398258, 39.904600]
+				];
+				var polyline = new AMap.Polyline({
+					path: lineArr, //设置线覆盖物路径
+					strokeColor: "#3366FF", //线颜色
+					strokeWeight: 5, //线宽
+					strokeStyle: "solid", //线样式
+				});
+				map.add(polyline);
+
+				var infoWindow = new AMap.InfoWindow({ //创建信息窗体
+					isCustom: false, //使用自定义窗体
+					content: '信息窗体', //信息窗体的内容可以是任意html片段
+					offset: new AMap.Pixel(16, -45)
+				});
+				var onMarkerClick = function(e) {
+					infoWindow.open(map, e.target.getPosition()); //打开信息窗体
+					//e.target就是被点击的Marker
+				}
+				var marker = new AMap.Marker({
+					position: [116.481181, 39.989792]
+				})
+				map.add(marker);
+				marker.on('click', onMarkerClick); //绑定click事件
+			}
+		</script>
+		<script src="http://webapi.amap.com/maps?v=1.4.6&key=4902973b1821fcab077ffc916c326bc0&callback=init"></script>
+		<!--<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>-->
+	</body>
+
+</html>

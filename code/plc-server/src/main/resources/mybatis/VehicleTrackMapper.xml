@@ -8,6 +8,10 @@
     <result column="longitude" property="longitude" jdbcType="VARCHAR" />
     <result column="coord_type" property="coordType" jdbcType="TINYINT" />
     <result column="track_time" property="trackTime" jdbcType="TIMESTAMP" />
+    <result column="yali" property="yali" jdbcType="VARCHAR" />
+    <result column="temp" property="temp" jdbcType="VARCHAR" />
+    <result column="shidu" property="shidu" jdbcType="VARCHAR" />
+    <result column="door_state" property="doorState" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -74,7 +78,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, vehicle_id, latitude, longitude, coord_type, track_time
+    id, vehicle_id, latitude, longitude, coord_type, track_time, yali, temp, shidu, door_state
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.openthinks.plc.core.model.VehicleTrackExample" >
     select
@@ -111,11 +115,13 @@
       SELECT UUID_SHORT()
     </selectKey>
     insert into vehicle_track (id, vehicle_id, latitude, 
-      longitude, coord_type, track_time
-      )
+      longitude, coord_type, track_time, 
+      yali, temp, shidu, 
+      door_state)
     values (#{id,jdbcType=BIGINT}, #{vehicleId,jdbcType=BIGINT}, #{latitude,jdbcType=VARCHAR}, 
-      #{longitude,jdbcType=VARCHAR}, #{coordType,jdbcType=TINYINT}, #{trackTime,jdbcType=TIMESTAMP}
-      )
+      #{longitude,jdbcType=VARCHAR}, #{coordType,jdbcType=TINYINT}, #{trackTime,jdbcType=TIMESTAMP}, 
+      #{yali,jdbcType=VARCHAR}, #{temp,jdbcType=VARCHAR}, #{shidu,jdbcType=VARCHAR}, 
+      #{doorState,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.openthinks.plc.core.model.VehicleTrack" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="BEFORE" >
@@ -139,6 +145,18 @@
       <if test="trackTime != null" >
         track_time,
       </if>
+      <if test="yali != null" >
+        yali,
+      </if>
+      <if test="temp != null" >
+        temp,
+      </if>
+      <if test="shidu != null" >
+        shidu,
+      </if>
+      <if test="doorState != null" >
+        door_state,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       #{id,jdbcType=BIGINT},
@@ -156,6 +174,18 @@
       </if>
       <if test="trackTime != null" >
         #{trackTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yali != null" >
+        #{yali,jdbcType=VARCHAR},
+      </if>
+      <if test="temp != null" >
+        #{temp,jdbcType=VARCHAR},
+      </if>
+      <if test="shidu != null" >
+        #{shidu,jdbcType=VARCHAR},
+      </if>
+      <if test="doorState != null" >
+        #{doorState,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -186,6 +216,18 @@
       <if test="record.trackTime != null" >
         track_time = #{record.trackTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.yali != null" >
+        yali = #{record.yali,jdbcType=VARCHAR},
+      </if>
+      <if test="record.temp != null" >
+        temp = #{record.temp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.shidu != null" >
+        shidu = #{record.shidu,jdbcType=VARCHAR},
+      </if>
+      <if test="record.doorState != null" >
+        door_state = #{record.doorState,jdbcType=INTEGER},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -198,7 +240,11 @@
       latitude = #{record.latitude,jdbcType=VARCHAR},
       longitude = #{record.longitude,jdbcType=VARCHAR},
       coord_type = #{record.coordType,jdbcType=TINYINT},
-      track_time = #{record.trackTime,jdbcType=TIMESTAMP}
+      track_time = #{record.trackTime,jdbcType=TIMESTAMP},
+      yali = #{record.yali,jdbcType=VARCHAR},
+      temp = #{record.temp,jdbcType=VARCHAR},
+      shidu = #{record.shidu,jdbcType=VARCHAR},
+      door_state = #{record.doorState,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -221,6 +267,18 @@
       <if test="trackTime != null" >
         track_time = #{trackTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="yali != null" >
+        yali = #{yali,jdbcType=VARCHAR},
+      </if>
+      <if test="temp != null" >
+        temp = #{temp,jdbcType=VARCHAR},
+      </if>
+      <if test="shidu != null" >
+        shidu = #{shidu,jdbcType=VARCHAR},
+      </if>
+      <if test="doorState != null" >
+        door_state = #{doorState,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -230,10 +288,14 @@
       latitude = #{latitude,jdbcType=VARCHAR},
       longitude = #{longitude,jdbcType=VARCHAR},
       coord_type = #{coordType,jdbcType=TINYINT},
-      track_time = #{trackTime,jdbcType=TIMESTAMP}
+      track_time = #{trackTime,jdbcType=TIMESTAMP},
+      yali = #{yali,jdbcType=VARCHAR},
+      temp = #{temp,jdbcType=VARCHAR},
+      shidu = #{shidu,jdbcType=VARCHAR},
+      door_state = #{doorState,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <!-- generated by SelectOneByExamplePlugin Tue Jun 19 10:26:45 CST 2018 -->
+  <!-- generated by SelectOneByExamplePlugin Thu Jul 19 23:37:45 CST 2018 -->
   <select id="selectOneByExample" parameterType="com.openthinks.plc.core.model.VehicleTrackExample" resultMap="BaseResultMap" >
     select
     <if test="distinct" >

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+
+	<display-name>TSP Web Path Functions</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>functions</short-name>
+	<uri>https://www.periodtech.cn/yueji/fns</uri>
+	
+	<function>
+		<name>p</name>
+		<function-class>com.iboitech.util.PathUtil</function-class>
+		<function-signature>java.lang.String path(java.lang.String)</function-signature>
+	</function>
+	<function>
+		<name>pS</name>
+		<function-class>com.iboitech.util.PathUtil</function-class>
+		<function-signature>java.lang.String pathStatic(java.lang.String)</function-signature>
+	</function>
+	<function>
+		<name>pD</name>
+		<function-class>com.iboitech.util.PathUtil</function-class>
+		<function-signature>java.lang.String pathDo(java.lang.String)</function-signature>
+	</function>
+	<function>
+		<name>pfD</name>
+		<function-class>com.iboitech.util.PathUtil</function-class>
+		<function-signature>java.lang.String pathDo(java.lang.String,java.lang.Object)</function-signature>
+	</function>
+	<function>
+		<name>pJ</name>
+		<function-class>com.iboitech.util.PathUtil</function-class>
+		<function-signature>java.lang.String pathJhtml(java.lang.String)</function-signature>
+	</function>
+	<function>
+		<name>pfJ</name>
+		<function-class>com.iboitech.util.PathUtil</function-class>
+		<function-signature>java.lang.String pathJhtml(java.lang.String,java.lang.Object)</function-signature>
+	</function>
+	<function>
+		<name>fmLongDate</name>
+		<function-class>com.iboitech.core.util.DateUtil</function-class>
+		<function-signature>java.lang.String format(java.util.Date)</function-signature>
+	</function>	
+	
+	<function>
+		<name>fmShortDate</name>
+		<function-class>com.iboitech.core.util.DateUtil</function-class>
+		<function-signature>java.lang.String formatShort(java.util.Date)</function-signature>
+	</function>	
+</taglib> 

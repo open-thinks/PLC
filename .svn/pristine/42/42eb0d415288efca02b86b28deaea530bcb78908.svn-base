@@ -1,0 +1,17 @@
+jdbc.driverClassName=${jdbc.driverClassName}
+jdbc.url=${jdbc.url}&useUnicode=true&autoReconnect=true&zeroDateTimeBehavior=round
+jdbc.username=${jdbc.username}
+jdbc.password=${jdbc.password}
+jdbc.minPoolSize=${jdbc.minPoolSize}
+jdbc.maxPoolSize=${jdbc.maxPoolSize}
+jdbc.initialPoolSize=${jdbc.initialPoolSize}
+jdbc.maxIdleTime=${jdbc.maxIdleTime}
+jdbc.minIdleTime=${jdbc.minIdleTime}
+jdbc.acquireIncrement=${jdbc.acquireIncrement}
+jdbc.maxStatements=${jdbc.maxStatements}
+jdbc.idleConnectionTestPeriod=${jdbc.idleConnectionTestPeriod}
+jdbc.acquireRetryAttempts=${jdbc.acquireRetryAttempts}
+jdbc.breakAfterAcquireFailure=${jdbc.breakAfterAcquireFailure}
+jdbc.testConnectionOnCheckout=${jdbc.testConnectionOnCheckout}
+jdbc.preferredTestQuery=${jdbc.preferredTestQuery}
+jdbc.checkoutTimeout=${jdbc.checkoutTimeout}

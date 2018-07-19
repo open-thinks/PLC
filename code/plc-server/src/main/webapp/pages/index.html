@@ -198,106 +198,17 @@
 			</nav>
 
 			<div id="page-wrapper">
+				<!--
 				<div class="row">
 					<div class="col-lg-12">
 						<h1 class="page-header">Dashboard</h1>
 					</div>
-					<!-- /.col-lg-12 -->
 				</div>
+				-->
 				<!-- /.row -->
+
 				<div class="row">
-					<div class="col-lg-3 col-md-6">
-						<div class="panel panel-primary">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fa fa-building fa-5x"></i>
-									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge">26</div>
-										<div>New Locations!</div>
-									</div>
-								</div>
-							</div>
-							<a href="#">
-								<div class="panel-footer">
-									<span class="pull-left">View Details</span>
-									<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-									<div class="clearfix"></div>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="panel panel-green">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fa fa-inbox fa-5x"></i>
-									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge">12</div>
-										<div>New Packages!</div>
-									</div>
-								</div>
-							</div>
-							<a href="#">
-								<div class="panel-footer">
-									<span class="pull-left">View Details</span>
-									<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-									<div class="clearfix"></div>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="panel panel-yellow">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fa fa-exchange fa-5x"></i>
-									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge">124</div>
-										<div>New Shipping orders!</div>
-									</div>
-								</div>
-							</div>
-							<a href="#">
-								<div class="panel-footer">
-									<span class="pull-left">View Details</span>
-									<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-									<div class="clearfix"></div>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="panel panel-red">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fa fa-truck fa-5x"></i>
-									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge">13</div>
-										<div>New vehicles!</div>
-									</div>
-								</div>
-							</div>
-							<a href="#">
-								<div class="panel-footer">
-									<span class="pull-left">View Details</span>
-									<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-									<div class="clearfix"></div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- /.row -->
-				<div class="row">
-					<div class="col-lg-8 plc-amap">
+					<div class="col-lg-12 plc-amap">
 						<div class="panel panel-default plc-amap-panel">
 							<div class="panel-heading">
 								<i class="fa fa-map-o fa-fw"></i> Real-time Track
@@ -311,13 +222,19 @@
 											<li>
 												<a href="#" data-action="reload"><i class="fa fa-refresh fa-fw"></i> Refresh</a>
 											</li>
+											<li class="divider"></li>
 											<li>
-												<a href="#" data-action="expand"><i class="fa fa-expand fa-fw"></i> Expand</a>
+												<a href="#" data-action="trackVehicle"><i class="fa fa-car fa-fw"></i> Track <i class="plc-track-tag fa fa-check-circle green hidden" aria-hidden="true"></i></a>
 											</li>
 											<li class="divider"></li>
 											<li>
-												<a href="#" data-action="fullscreen"><i class="fa fa-arrows-alt fa-fw"></i> Fullscreen</a>
+												<a href="#" data-action="expand"><i class="fa fa-expand fa-fw"></i> Expand</a>
 											</li>
+											<!--
+											<li>
+												<a href="#" data-action="cfullscreen"><i class="fa fa-arrows-alt fa-fw"></i> Fullscreen</a>
+											</li>
+											-->
 										</ul>
 									</div>
 								</div>
@@ -331,78 +248,32 @@
 						<!-- /.panel -->
 					</div>
 					<!-- /.col-lg-8 -->
-					<div class="col-lg-4">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<i class="fa fa-bell fa-fw"></i> Related Information
-							</div>
-							<!-- /.panel-heading -->
-							<div class="panel-body">
-								<form role="form" class="form-base form-horizontal form-loc hidden">
-									<div class="form-group">
-										<label class="col-sm-3 control-label">地点名</label>
-										<div class="col-sm-9">
-											<p class="form-control-static" data-name="name"></p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-sm-3 control-label">类型</label>
-										<div class="col-sm-9">
-											<p class="form-control-static" data-name="locationTypeDesc"></p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-sm-3 control-label">所在省</label>
-										<div class="col-sm-9">
-											<p class="form-control-static" data-name="province"></p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-sm-3 control-label">所在市</label>
-										<div class="col-sm-9">
-											<p class="form-control-static" data-name="city"></p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-sm-3 control-label">地址</label>
-										<div class="col-sm-9">
-											<p class="form-control-static" data-name="address"></p>
-										</div>
-									</div>
-								</form>
-							</div>
-							<!-- /.panel-body -->
-						</div>
-						<!-- /.panel -->
-					</div>
-					<!-- /.col-lg-4 -->
+
 				</div>
-				<!-- /.row -->
+				<!-- /#page-wrapper -->
+
 			</div>
-			<!-- /#page-wrapper -->
+			<!-- /#wrapper -->
 
-		</div>
-		<!-- /#wrapper -->
+			<!-- jQuery -->
+			<script src="../vendor/jquery/jquery.min.js"></script>
 
-		<!-- jQuery -->
-		<script src="../vendor/jquery/jquery.min.js"></script>
+			<!-- Bootstrap Core JavaScript -->
+			<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
-		<!-- Bootstrap Core JavaScript -->
-		<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+			<!-- Metis Menu Plugin JavaScript -->
+			<script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
-		<!-- Metis Menu Plugin JavaScript -->
-		<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+			<script src="../vendor/amap/js/es5.min.js"></script>
 
-		<script src="../vendor/amap/js/es5.min.js"></script>
+			<script src="http://webapi.amap.com/maps?v=1.4.6&key=4902973b1821fcab077ffc916c326bc0&&plugin=AMap.TruckDriving&callback=init"></script>
+			
+			<!-- Custom Theme JavaScript -->
+			<script src="../dist/js/sb-admin-2.js"></script>
 
-		<script src="http://webapi.amap.com/maps?v=1.4.6&key=4902973b1821fcab077ffc916c326bc0&callback=init"></script>
+			<script type="text/javascript" src="../dist/js/app.cnf.js"></script>
 
-		<!-- Custom Theme JavaScript -->
-		<script src="../dist/js/sb-admin-2.js"></script>
-
-		<script type="text/javascript" src="../dist/js/app.cnf.js"></script>
-
-		<script type="text/javascript" src="../dist/js/app.main.js"></script>
+			<script type="text/javascript" src="../dist/js/app.main.js"></script>
 
 	</body>
 

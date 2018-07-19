@@ -8,14 +8,16 @@ package com.openthinks.plc.saas;
  *
  */
 public interface APIConstant {
-	// /api
-	String BASE = "";
+  // /api
+  String BASE = "";
 
-	String LOCATION = BASE + "/locations";
+  String LOCATION = BASE + "/locations";
 
-	String SHIPPING = BASE + "/ships";
+  String SHIPPING = BASE + "/ships";
 
-	String PACKING = BASE + "/packings";
+  String PACKING = BASE + "/packings";
 
-	String VEHICLE = BASE + "/vehicles";
+  String VEHICLE = BASE + "/vehicles";
+
+  String SIGFOX = BASE + "/sigfox";
 }

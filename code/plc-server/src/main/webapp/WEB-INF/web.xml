@@ -82,13 +82,27 @@
 		<url-pattern>*.jhtml</url-pattern>
 	</filter-mapping>
 
+	<filter>
+		<filter-name>AdminAuthFilter</filter-name>
+		<filter-class>com.openthinks.plc.servlet.BackendAuthenticationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AdminAuthFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
 	</listener>
-
+	<!-- <jsp-config>
+		<taglib>
+			<taglib-uri>https://www.periodtech.cn/yueji/fns</taglib-uri>
+			<taglib-location>/WEB-INF/tags/path.tld</taglib-location>
+		</taglib>
+	</jsp-config> -->
 	<welcome-file-list>
 		<welcome-file>index.jhtml</welcome-file>
 		<welcome-file>index.html</welcome-file>

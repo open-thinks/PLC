@@ -10,7 +10,7 @@ window.app = window.app || {
 			},
 			mqtt:{
 				host:"localhost",
-				port:"1833",
+				port:"8083",
 				topic_template:"TBOX/NAD/${imei}/LOG",
 				client_template:"rdb-ws-${sid}"
 			},
@@ -18,12 +18,12 @@ window.app = window.app || {
 		},
 		prod: {
 			base_url:{
-				server: '//tokyo.tochat.cc:8080/plc/',
-				staticUrl:'//tokyo.tochat.cc:8080/plc/static/'
+				server: '//bosch.tochat.cc:8088/plc/',
+				staticUrl:'//bosch.tochat.cc:8088/plc/static/'
 			},
 			mqtt:{
-				host:"tokyo.tochat.cc",
-				port:"1833",
+				host:"bosch.tochat.cc",
+				port:"8083",
 				topic_template:"TBOX/NAD/${imei}/LOG",
 				client_template:"rdb-ws-${sid}"
 			},

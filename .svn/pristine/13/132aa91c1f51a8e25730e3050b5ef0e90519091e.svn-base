@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Scanning</string>
+
+    <array name="step_view">
+        <item>仓库</item>
+        <item>运输</item>
+        <item>到站</item>
+    </array>
+</resources>

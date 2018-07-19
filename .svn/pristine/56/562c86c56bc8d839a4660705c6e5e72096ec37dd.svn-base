@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-core-utils-27.1.0">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/support-core-utils-27.1.0.aar/a11f146db2750ea84b465df7e5c1650f/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/support-core-utils-27.1.0.aar/a11f146db2750ea84b465df7e5c1650f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/modules-2/files-2.1/com.android.support/support-core-utils/27.1.0/123989cd14a65eb94f860c48200344bd54baf70e/support-core-utils-27.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

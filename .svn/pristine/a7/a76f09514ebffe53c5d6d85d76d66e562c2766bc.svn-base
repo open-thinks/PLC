@@ -1,0 +1,11 @@
+#This is program controlled resource, please DO NOT
+#								change it
+#Wed Jul 11 23:52:39 CST 2018
+project.basedir=C\:\\Users\\DAD2SZH\\WORK\\DEV\\Code\\my\\BoschIot\\code\\plc-server
+driverClass=com.mysql.jdbc.Driver
+generatorJDBCDriver=C\:\\Users\\DAD2SZH\\.m2\\repository/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar
+project.build.directory=C\:\\Users\\DAD2SZH\\WORK\\DEV\\Code\\my\\BoschIot\\code\\plc-server\\target
+generatorUserId=root
+javaPackagePrefix=com.openthinks.plc.core
+generatorPassword=123456
+generatorConnectionURL=jdbc\:mysql\://tochat.cc\:3306/plc?characterEncoding\=UTF-8

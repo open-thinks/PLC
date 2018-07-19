@@ -83,8 +83,8 @@
 
 		<table tableName="packs">
 			<property name="AdvancedWhereClausePluginEnabled" value="true" />
-			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
-				identity="false" />
+			<!-- <generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
+				identity="false" /> -->
 		</table>
 
 		<table tableName="shippings">
@@ -98,12 +98,22 @@
 			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
 				identity="false" />
 		</table>
+		
+		<table tableName="vehicle_track_one">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
+				identity="false" />
+		</table>
+		
+		
 
 		<table tableName="vehicles">
 			<property name="AdvancedWhereClausePluginEnabled" value="true" />
 			<generatedKey column="id" sqlStatement="SELECT UUID_SHORT()"
 				identity="false" />
 		</table>
+		
+		
 		<!-- View -->
 		<table tableName="locations_vw" enableInsert="false"
 			enableDeleteByExample="false" enableUpdateByExample="false"
@@ -122,6 +132,13 @@
 			enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
 			<property name="AdvancedWhereClausePluginEnabled" value="true" />
 		</table>
+		
+		<table tableName="vehicle_track_vw" enableInsert="false"
+			enableDeleteByExample="false" enableUpdateByExample="false"
+			enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false">
+			<property name="AdvancedWhereClausePluginEnabled" value="true" />
+		</table>
+
 
 	</context>
 </generatorConfiguration>

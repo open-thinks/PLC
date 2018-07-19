@@ -15,6 +15,14 @@ public class VehicleTrack {
 
     private Date trackTime;
 
+    private String yali;
+
+    private String temp;
+
+    private String shidu;
+
+    private Integer doorState;
+
     public Long getId() {
         return id;
     }
@@ -63,6 +71,38 @@ public class VehicleTrack {
         this.trackTime = trackTime;
     }
 
+    public String getYali() {
+        return yali;
+    }
+
+    public void setYali(String yali) {
+        this.yali = yali == null ? null : yali.trim();
+    }
+
+    public String getTemp() {
+        return temp;
+    }
+
+    public void setTemp(String temp) {
+        this.temp = temp == null ? null : temp.trim();
+    }
+
+    public String getShidu() {
+        return shidu;
+    }
+
+    public void setShidu(String shidu) {
+        this.shidu = shidu == null ? null : shidu.trim();
+    }
+
+    public Integer getDoorState() {
+        return doorState;
+    }
+
+    public void setDoorState(Integer doorState) {
+        this.doorState = doorState;
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -80,7 +120,11 @@ public class VehicleTrack {
             && (this.getLatitude() == null ? other.getLatitude() == null : this.getLatitude().equals(other.getLatitude()))
             && (this.getLongitude() == null ? other.getLongitude() == null : this.getLongitude().equals(other.getLongitude()))
             && (this.getCoordType() == null ? other.getCoordType() == null : this.getCoordType().equals(other.getCoordType()))
-            && (this.getTrackTime() == null ? other.getTrackTime() == null : this.getTrackTime().equals(other.getTrackTime()));
+            && (this.getTrackTime() == null ? other.getTrackTime() == null : this.getTrackTime().equals(other.getTrackTime()))
+            && (this.getYali() == null ? other.getYali() == null : this.getYali().equals(other.getYali()))
+            && (this.getTemp() == null ? other.getTemp() == null : this.getTemp().equals(other.getTemp()))
+            && (this.getShidu() == null ? other.getShidu() == null : this.getShidu().equals(other.getShidu()))
+            && (this.getDoorState() == null ? other.getDoorState() == null : this.getDoorState().equals(other.getDoorState()));
     }
 
     @Override
@@ -93,6 +137,10 @@ public class VehicleTrack {
         result = prime * result + ((getLongitude() == null) ? 0 : getLongitude().hashCode());
         result = prime * result + ((getCoordType() == null) ? 0 : getCoordType().hashCode());
         result = prime * result + ((getTrackTime() == null) ? 0 : getTrackTime().hashCode());
+        result = prime * result + ((getYali() == null) ? 0 : getYali().hashCode());
+        result = prime * result + ((getTemp() == null) ? 0 : getTemp().hashCode());
+        result = prime * result + ((getShidu() == null) ? 0 : getShidu().hashCode());
+        result = prime * result + ((getDoorState() == null) ? 0 : getDoorState().hashCode());
         return result;
     }
 
@@ -130,6 +178,26 @@ public class VehicleTrack {
 
         public Builder trackTime(Date trackTime) {
             obj.trackTime = trackTime;
+            return this;
+        }
+
+        public Builder yali(String yali) {
+            obj.yali = yali;
+            return this;
+        }
+
+        public Builder temp(String temp) {
+            obj.temp = temp;
+            return this;
+        }
+
+        public Builder shidu(String shidu) {
+            obj.shidu = shidu;
+            return this;
+        }
+
+        public Builder doorState(Integer doorState) {
+            obj.doorState = doorState;
             return this;
         }
 
